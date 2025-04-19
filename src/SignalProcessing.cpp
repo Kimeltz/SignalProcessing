@@ -40,3 +40,8 @@ float movingAverage::getValue()
 {
     return _sum / _count;
 }
+
+int movingAverage::getSize()
+{
+    return _size;
+}
