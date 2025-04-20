@@ -10,6 +10,7 @@ class movingAverage
         float* getBuffer();
         float getValue();
         int getSize();
+        int getCount();
 
     private:
         int _size;

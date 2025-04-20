@@ -45,3 +45,8 @@ int movingAverage::getSize()
 {
     return _size;
 }
+
+int movingAverage::getCount()
+{
+    return _count;
+}
