@@ -12,7 +12,7 @@ void setup() {
 
 void loop() {
     // Tambahkan nilai yang mau di masukkan
-    int a = 15;
+    int a = 15;   
     // Update
     float nilaiMA = ma.update(a);
     // Ambil semua data
@@ -20,8 +20,8 @@ void loop() {
     // Tampilkan di Serial Monitor
     Serial.println("Nilai yang sudah dirata rata : " + String(nilaiMA));
     Serial.println("Semua Data :");
-    for(int i = 0; i < ma.getSize(); i++)
+    for(int i = 0; i < ma.getCount(); i++)
     {
-        Serial.println(semuaData[ma.getSize()]);
+        Serial.println(semuaData[i]);
     }
 }
