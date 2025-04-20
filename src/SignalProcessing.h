@@ -5,6 +5,7 @@ class movingAverage
 {
     public:
         movingAverage(int bufferSize);
+        ~movingAverage();
         int init();
         float update(float newData);
         float* getBuffer();
