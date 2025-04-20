@@ -1,0 +1,159 @@
+\doxysection{moving\+Average Class Reference}
+\hypertarget{classmoving_average}{}\label{classmoving_average}\index{movingAverage@{movingAverage}}
+
+
+Class untuk menghitung moving average (rata-\/rata bergerak).  
+
+
+
+
+{\ttfamily \#include $<$Signal\+Processing.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmoving_average_a3e224d49fb20696bdeb130a0670ae970}{moving\+Average}} (int buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Konstruktor untuk class \doxylink{classmoving_average}{moving\+Average}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmoving_average_aba7ed453e979718eca12bccc344f1e90}{\texorpdfstring{$\sim$}{\string~}moving\+Average}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor untuk class \doxylink{classmoving_average}{moving\+Average}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmoving_average_a309e46cc2ad1c2338512f6dcbeb321db}{init}} ()
+\begin{DoxyCompactList}\small\item\em Menginisialisasi buffer dan memori. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmoving_average_ad6657e153b661c6618b4d8a78274666b}{update}} (float new\+Data)
+\begin{DoxyCompactList}\small\item\em Mengupdate nilai rata-\/rata bergerak dengan data baru. \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classmoving_average_a87573ee0bf252eaa5f4c96eea6dce4c1}{get\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Mengembalikan pointer ke buffer yang digunakan untuk menyimpan data. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmoving_average_ab4a3104824a2f12ead629074f26458af}{get\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Mengembalikan nilai rata-\/rata bergerak saat ini. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmoving_average_a8fb7728d1985edcc80e6a84142d093d6}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Mengembalikan ukuran buffer yang digunakan untuk menyimpan data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmoving_average_a00ee9953e0ddc5a52d72c0c1c821d06b}{get\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Mengembalikan jumlah data yang sudah diterima dan diproses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class untuk menghitung moving average (rata-\/rata bergerak). 
+
+Class ini menyimpan data dalam buffer dan menghitung rata-\/rata bergerak berdasarkan data yang diterima. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmoving_average_a3e224d49fb20696bdeb130a0670ae970}\index{movingAverage@{movingAverage}!movingAverage@{movingAverage}}
+\index{movingAverage@{movingAverage}!movingAverage@{movingAverage}}
+\doxysubsubsection{\texorpdfstring{movingAverage()}{movingAverage()}}
+{\footnotesize\ttfamily \label{classmoving_average_a3e224d49fb20696bdeb130a0670ae970} 
+moving\+Average\+::moving\+Average (\begin{DoxyParamCaption}\item[{int}]{buffer\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor untuk class \doxylink{classmoving_average}{moving\+Average}. 
+
+Konstruktor ini akan menginisialisasi ukuran buffer, indeks, jumlah data yang diterima, dan buffer itu sendiri.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer\+Size} & Ukuran dari buffer yang digunakan untuk menyimpan data. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmoving_average_aba7ed453e979718eca12bccc344f1e90}\index{movingAverage@{movingAverage}!````~movingAverage@{\texorpdfstring{$\sim$}{\string~}movingAverage}}
+\index{````~movingAverage@{\texorpdfstring{$\sim$}{\string~}movingAverage}!movingAverage@{movingAverage}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}movingAverage()}{\string~movingAverage()}}
+{\footnotesize\ttfamily \label{classmoving_average_aba7ed453e979718eca12bccc344f1e90} 
+moving\+Average\+::\texorpdfstring{$\sim$}{\string~}moving\+Average (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destruktor untuk class \doxylink{classmoving_average}{moving\+Average}. 
+
+Fungsi ini digunakan untuk membebaskan memori yang digunakan oleh buffer ketika objek dihancurkan. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmoving_average_a87573ee0bf252eaa5f4c96eea6dce4c1}\index{movingAverage@{movingAverage}!getBuffer@{getBuffer}}
+\index{getBuffer@{getBuffer}!movingAverage@{movingAverage}}
+\doxysubsubsection{\texorpdfstring{getBuffer()}{getBuffer()}}
+{\footnotesize\ttfamily \label{classmoving_average_a87573ee0bf252eaa5f4c96eea6dce4c1} 
+float \texorpdfstring{$\ast$}{*} moving\+Average\+::get\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Mengembalikan pointer ke buffer yang digunakan untuk menyimpan data. 
+
+\begin{DoxyReturn}{Returns}
+float\texorpdfstring{$\ast$}{*} Pointer ke buffer. 
+\end{DoxyReturn}
+\Hypertarget{classmoving_average_a00ee9953e0ddc5a52d72c0c1c821d06b}\index{movingAverage@{movingAverage}!getCount@{getCount}}
+\index{getCount@{getCount}!movingAverage@{movingAverage}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily \label{classmoving_average_a00ee9953e0ddc5a52d72c0c1c821d06b} 
+int moving\+Average\+::get\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Mengembalikan jumlah data yang sudah diterima dan diproses. 
+
+\begin{DoxyReturn}{Returns}
+int Jumlah data yang sudah diterima. 
+\end{DoxyReturn}
+\Hypertarget{classmoving_average_a8fb7728d1985edcc80e6a84142d093d6}\index{movingAverage@{movingAverage}!getSize@{getSize}}
+\index{getSize@{getSize}!movingAverage@{movingAverage}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{classmoving_average_a8fb7728d1985edcc80e6a84142d093d6} 
+int moving\+Average\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Mengembalikan ukuran buffer yang digunakan untuk menyimpan data. 
+
+\begin{DoxyReturn}{Returns}
+int Ukuran buffer. 
+\end{DoxyReturn}
+\Hypertarget{classmoving_average_ab4a3104824a2f12ead629074f26458af}\index{movingAverage@{movingAverage}!getValue@{getValue}}
+\index{getValue@{getValue}!movingAverage@{movingAverage}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \label{classmoving_average_ab4a3104824a2f12ead629074f26458af} 
+float moving\+Average\+::get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Mengembalikan nilai rata-\/rata bergerak saat ini. 
+
+\begin{DoxyReturn}{Returns}
+float Nilai rata-\/rata bergerak. 
+\end{DoxyReturn}
+\Hypertarget{classmoving_average_a309e46cc2ad1c2338512f6dcbeb321db}\index{movingAverage@{movingAverage}!init@{init}}
+\index{init@{init}!movingAverage@{movingAverage}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classmoving_average_a309e46cc2ad1c2338512f6dcbeb321db} 
+int moving\+Average\+::init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Menginisialisasi buffer dan memori. 
+
+\begin{DoxyReturn}{Returns}
+int Status inisialisasi, 0 jika berhasil, -\/1 jika gagal. 
+\end{DoxyReturn}
+\Hypertarget{classmoving_average_ad6657e153b661c6618b4d8a78274666b}\index{movingAverage@{movingAverage}!update@{update}}
+\index{update@{update}!movingAverage@{movingAverage}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classmoving_average_ad6657e153b661c6618b4d8a78274666b} 
+float moving\+Average\+::update (\begin{DoxyParamCaption}\item[{float}]{new\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Mengupdate nilai rata-\/rata bergerak dengan data baru. 
+
+Fungsi ini menghitung rata-\/rata bergerak setelah menerima data baru. Jika jumlah data sudah mencapai ukuran buffer, maka data yang lama akan digantikan dengan yang baru.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Data} & Data baru yang akan dimasukkan ke dalam buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Nilai rata-\/rata bergerak setelah data baru dimasukkan. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_signal_processing_8h}{Signal\+Processing.\+h}}\item 
+src/\mbox{\hyperlink{_signal_processing_8cpp}{Signal\+Processing.\+cpp}}\end{DoxyCompactItemize}
