@@ -3,10 +3,10 @@
 #include <math.h>
 
 movingAverage::movingAverage(int bufferSize)
-    :_size(bufferSize), _index(0), _count(0), _sum(0.0f) {}
+    :_size(bufferSize), _index(0), _count(0), _sum(0.0f), _buffer(nullptr) {}
 
 movingAverage::~movingAverage() {
-    free(_buffer);
+    if (_buffer) free(_buffer);
 }
 
 int movingAverage::init()
@@ -38,6 +38,7 @@ float* movingAverage::getBuffer()
 
 float movingAverage::getValue()
 {
+    if (_count == 0) return 0.0f;
     return _sum / _count;
 }
 
