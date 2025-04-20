@@ -84,4 +84,7 @@ class movingAverage
 
 };
 
+float roundToNearest005(float val);
+float* roundToNearest005(float* val, int size);
+
 #endif

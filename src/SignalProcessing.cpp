@@ -48,3 +48,16 @@ int movingAverage::getCount()
 {
     return _count;
 }
+
+float roundToNearest005(float val)
+{
+    return round(val * 20) / 20;
+}
+float* roundToNearest005(float* val, int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        val[i] = round(val[i] * 20) / 20;
+    }
+    return val;
+}
