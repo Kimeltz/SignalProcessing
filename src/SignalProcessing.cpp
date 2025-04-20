@@ -11,17 +11,14 @@ movingAverage::~movingAverage() {
 
 int movingAverage::init()
 {
+    if (_buffer) free(_buffer);
     _buffer = (float*) calloc(_size, sizeof(float));
-    if(!_buffer)
-    {
-        Serial.println("Memory Allocation Failed");
-        return -1;
-    }
-    else return 0;
+    return !_buffer ? -1 : 0;
 }
 
 float movingAverage::update(float newData)
 {
+    if (!_buffer) return 0.0f;
     if(_count == _size) _sum -= _buffer[_index];
     else _count++;
 
