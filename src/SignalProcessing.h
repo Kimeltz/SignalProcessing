@@ -33,7 +33,7 @@ class movingAverage
          * 
          * @return int Status inisialisasi, 0 jika berhasil, -1 jika gagal.
          */
-        int init();
+        bool init();
 
          /**
          * @brief Mengupdate nilai rata-rata bergerak dengan data baru.

@@ -9,11 +9,11 @@ movingAverage::~movingAverage() {
     if (_buffer) free(_buffer);
 }
 
-int movingAverage::init()
+bool movingAverage::init()
 {
     if (_buffer) free(_buffer);
     _buffer = (float*) calloc(_size, sizeof(float));
-    return !_buffer ? -1 : 0;
+    return (_buffer != nullptr);
 }
 
 float movingAverage::update(float newData)
